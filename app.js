@@ -61,6 +61,20 @@ app.post('/',(req,res)=>{
 //    console.log("College :"+college);
 });
 
+
+app.get('/getdetailsapi/:name',(req,res)=>{
+
+    var nam=req.params.name;
+    student.find({name:nam},(error,data)=>{
+        if(error){
+            throw error;
+        }
+        else{
+            res.send(data);
+        }
+    });
+});
+
 app.get('/getdata',(req,res)=>{
     result=student.find((error,data)=>{
         if(error){
