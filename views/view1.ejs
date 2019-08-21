@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">no:</th>
+            <th scope="col">Name</th>
+            <th scope="col">Rollno</th>
+            <th scope="col">Admission No</th>
+            <th scope="col">college</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%for(var i=0;i<data.length;i++){%>
+          <tr>
+            <th scope="row"><%=i%></i></th>
+            <td><%=data[i].name%></td>
+            <td><%=data[i].rollno%></td>
+            <td><%=data[i].adno%></td>
+            <td><%=data[i].college%></td>
+          </tr>
+          <%}%>
+        </tbody>
+      </table>
+</body>
+</html>

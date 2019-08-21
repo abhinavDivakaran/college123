@@ -26,10 +26,11 @@ const student=Mongoose.model("studentdetails",
 
 );
 
+//Mongoose.connect("http://localhost:27017/studentsdb")
 
-Mongoose.connect("mongodb://localhost:27017/collegedb");
+//Mongoose.connect("mongodb+srv://abhinavdivakaran:abhinavdivakaran@cluster0-ksuet.mongodb.net/test?retryWrites=true&w=majority");
 
-
+Mongoose.connect("mongodb://localhost:27017/collegedb");    
 
 app.get('/',(req,res)=>{
 
@@ -96,7 +97,7 @@ app.get('/view',(req,res)=>{
 
         console.log(data)
 
-        res.render('view',{'data':data});
+        res.render('view1',{'data':data});
 
 
     });
